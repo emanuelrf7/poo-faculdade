@@ -1,3 +1,12 @@
+# 3.	Classe Livro:
+#
+# Atributos: titulo, autor, ano_publicacao, numero_paginas, genero
+# Métodos: abrir, fechar, marcar_pagina, avancar_pagina, retroceder_pagina
+# •	abrir(): Exibe uma mensagem indicando que o livro foi aberto.
+# •	fechar(): Exibe uma mensagem indicando que o livro foi fechado.
+# •	marcar_pagina(pagina): Marca a página atual do livro.
+# •	avancar_pagina(): Avança uma página, se não estiver na última página.
+# •	retroceder_pagina(): Retrocede uma página, se não estiver na primeira página.
 class Livro:
     def __init__(self):
         self.titulo = ""
@@ -49,8 +58,9 @@ class Livro:
     def fechar(self):
         return "O livro foi fechado!"
     
-    def marcar_pagina(self, pagina):
-        self.pagina = pagina
+    def marcar_pagina(self):
+        # self.pagina = pagina
+        return print(f'Você marcou a página {self.pagina}')
     
     def avancar_pagina(self):
         if self.pagina <= self.numero_paginas:
@@ -78,8 +88,12 @@ livro.set_genero("Biografia")
 print(livro.get_genero())
 print(livro.abrir())
 livro.set_pagina(50)
-print(livro.get_pagina())
+livro.marcar_pagina()
 livro.avancar_pagina()
 livro.avancar_pagina()
 livro.retroceder_pagina()
 livro.avancar_pagina()
+livro.avancar_pagina()
+livro.avancar_pagina()
+livro.avancar_pagina()
+livro.retroceder_pagina()
