@@ -6,10 +6,22 @@
 # •	receber_aumento(percentual): Aplica um aumento de percentual ao salario.
 # •	mudar_departamento(novo_departamento): Altera o departamento para o novo_departamento.
 # •	exibir_dados(): Exibe os dados do funcionário, incluindo nome, cargo, salário e departamento.
+class Cargo:
+    def __init__(self, cargo):
+        self.set_cargo(cargo)
+    
+
+    def set_cargo(self, cargo):
+        self.cargo = cargo
+
+
+    def get_cargo(self):
+        return self.cargo
+
 class Funcionario():
     def __init__(self):
         self.nome = ""
-        self.cargo = ""
+        self.cargo = None
         self.salario = 0.0
         self.departamento = ""
     
