@@ -76,8 +76,8 @@ class Curso:
         return self.professor.get_nome_escolaridade()
 
 
-    def get_nome_estado_escola(self):
-        return self.escola.get_nome_estado_cidade()  
+    def get_nome_estado(self):
+        return self.escola.get_nome_estado()  
 
 
 class Escola:
@@ -115,7 +115,7 @@ class Escola:
         return self.professor.get_nome_escolaridade()
     
 
-    def get_nome_estado_cidade(self):
+    def get_nome_estado(self):
         return self.cidade.get_nome_estado()
 
 
@@ -189,8 +189,8 @@ class Aluno(Pessoa):
         return self.matricula
     
 
-    def get_nome_estado_curso(self):
-        return self.curso.get_nome_estado_escola()
+    def get_nome_estado(self):
+        return self.curso.get_nome_estado()
 
 escolaridade = Escolaridade()
 escolaridade.set_escolaridade("Doutorado")
@@ -212,4 +212,4 @@ escola.set_cidade(cidade)
 curso.set_escola(escola)
 aluno = Aluno()
 aluno.set_curso(curso)
-print(f"d) Qual o estado de naturalidade de um aluno? - {aluno.get_nome_estado_curso()}")
+print(f"d) Qual o estado de naturalidade de um aluno? - {aluno.get_nome_estado()}")
