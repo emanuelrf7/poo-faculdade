@@ -1,1 +1,2 @@
-turma.exibir_alunos()
+def get_naturalidade(self):
+    #     return self.naturalidade
